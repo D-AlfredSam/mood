@@ -1,12 +1,4 @@
 fastapi
 uvicorn
-python-multipart
-opencv-python-headless
-deepface
 numpy
-scipy
-pandas
-tensorflow
-keras
-ffmpeg-python
-tf-keras
+pydantic
