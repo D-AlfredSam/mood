@@ -414,19 +414,6 @@ async def analyze_video(file: UploadFile = File(...)):
                 os.remove(path)
         os.rmdir(temp_dir)
 
-
-
-@app.get("/hello")
-async def stream_song():
-    if not os.path.exists(SONG_PATH):
-        return {"error": "Song not found"}
-
-    def iterfile():
-        with open(SONG_PATH, mode="rb") as file:
-            yield from file
-
-    return StreamingResponse(iterfile(), media_type="audio/mpeg")
-
 class TextInput(BaseModel):
     text: str
 
